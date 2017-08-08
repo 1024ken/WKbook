@@ -1,0 +1,9 @@
+<p><%= notice %></p>
+<h1>トピック一覧</h1>
+<% @books.each do |book| %>
+  <p>タイトル:<%= book.title %></p>
+  <p>内容:<%= book.content %></p>
+  <%= link_to "トピックを編集する", edit_book_path(book.id), data: {confirm: "本当に編集してもいいですか？"}%>
+  <%= link_to "トピックを削除する", books_path(book.id), data: {confirm: "本当に削除してもいいですか？"}%>
+<% end %>
+<%= link_to "トピックを作成する", new_book_path%>
