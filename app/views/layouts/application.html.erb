@@ -9,23 +9,25 @@
   </head>
   <header>
     <ul class="nav nav-tabs">
-      <li role="presentation" class="active"><a href="#">ホーム</a></li>
-      <li role="presentation"><a href="#">トピック</a></li>
-      <li role="presentation"><a href="#">ユーザー一覧</a></li>
-      <li role="presentation"><a href="#">メッセージ</a></li>
+      <li><%= link_to 'ホーム', root_path %></li>
+      <li><%= link_to 'トピック', books_path %></li>
+      <li><%= link_to 'ユーザー一覧' %></li>
+      <li><%= link_to 'メッセージ' %></li>
     </ul>
-    <% if user_signed_in? %>
-      <li><<%= link_to 'マイページ', edit_user_resistrationpath %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to 'ログイン', new_user_session_path  %></li>
-          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-        <% end %>
-      </header>
-      <body>
-        <%= yield %>
-      </body>
-      <footer>
-        <p>© 2017 Watanabe Kenichi create.</p>
-      </footer>
-    </html>
+    <ul class="nav nav-tabs">
+      <% if user_signed_in? %>
+        <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path  %></li>
+        <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </header>
+  <body>
+    <%= yield %>
+  </body>
+  <footer>
+    <p>© 2017 Watanabe Kenichi create.</p>
+  </footer>
+</html>

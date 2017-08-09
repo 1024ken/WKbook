@@ -1,9 +1,15 @@
-<p><%= notice %></p>
-<h1>トピック一覧</h1>
-<% @books.each do |book| %>
-  <p>タイトル:<%= book.title %></p>
-  <p>内容:<%= book.content %></p>
-  <%= link_to "トピックを編集する", edit_book_path(book.id), data: {confirm: "本当に編集してもいいですか？"}%>
-  <%= link_to "トピックを削除する", books_path(book.id), data: {confirm: "本当に削除してもいいですか？"}%>
-<% end %>
-<%= link_to "トピックを作成する", new_book_path%>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>トピック一覧</h1>
+    <%= link_to "トピックを作成する", new_book_path, class: 'btn btn-default' %>
+    <% @books.each do |book| %>
+      <div class="row">
+        <p>タイトル:<%= book.title %></p>
+        <p>内容:<%= book.content %></p>
+        <%= link_to "編集", edit_book_path(book.id),class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除", books_path(book.id), data: {confirm: "本当に削除してもいいですか？"},  class: 'btn btn-default btn-sm btn btn-danger' %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:edit, :update, :destroy]
-  berore_action :authentificate_user!
+  before_action :authenticate_user!
 
   def index
     @books = Book.all
@@ -15,12 +15,10 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.find(params[:id])
-    if @book = Book.update(params[:id])
+    if @book.update(books_params)
       redirect_to books_path, notice: "トピックを更新しました！"
     else
       render "edit"
@@ -28,10 +26,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create(books_params)
-    @book.user_id = current_user.id
+    @book = Book.new(books_params)
     if @book.save
       redirect_to books_path, notice: "トピックを作成しました！"
+      NoticeMailer.sendmail_book(@book).deliver
     else
       render "new"
     end
