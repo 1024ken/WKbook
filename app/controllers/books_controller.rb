@@ -4,6 +4,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    # render json: @books
   end
 
   def new
@@ -27,6 +28,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(books_params)
+    @book.user_id = current_user.id
     if @book.save
       redirect_to books_path, notice: "トピックを作成しました！"
       NoticeMailer.sendmail_book(@book).deliver
@@ -47,7 +49,7 @@ class BooksController < ApplicationController
 
   private
   def books_params
-    params.require(:book).permit(:title, :content)
+    params.require(:book).permit(:title, :content, :image)
   end
 
   def set_book
