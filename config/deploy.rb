@@ -2,7 +2,7 @@
 lock '3.6.0'
 
 set :application, 'WKbook'
-set :repo_url, 'git@github.com:1024ken/WKbook.git'
+set :repo_url, 'https://github.com/1024ken/WKbook.git'
 
 set :branch, ENV['BRANCH'] || 'master'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
