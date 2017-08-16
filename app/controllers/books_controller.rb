@@ -1,10 +1,19 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   def index
     @books = Book.all
+    respond_to do |format|
+      format.html
+      format.js
+    end
     # render json: @books
+  end
+
+  def show
+    @comment = @book.comments.build
+    @comments = @book.comments
   end
 
   def new

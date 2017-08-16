@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1-confirm {
+  margin-top: 100px;
+}
+
 .wrapper {
+  margin-top: 100px;
   margin-bottom: 74px;
-  padding: 100px 20px 20px 35px;
+  padding: 0px 20px 20px 35px;
   .row {
     border-bottom: 1px solid #ccc;
     padding: 20px;
@@ -16,6 +21,16 @@ input[type="submit"].btn-block{
   margin: 15px 0;
 }
 
-.container {
-  padding-bottom: 85px;
+.book_picture {
+    width: 200px;
+    height: 140px;
 }
+
+.booker {
+  display: block;
+}
+
+.book-mgt-100{
+  margin-top: 100px;
+}
+

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container-child col-md-2 col-sm-4 col-xs-6 show">
+    <div class="row">
+      <div class="col-sm-12" >
+        <div class= "UD">
+          <h2>ユーザー詳細</h2>
+        </div>
+        <div class="profile-show">
+          <%= link_to profile_img(@user) %>
+        </div>
+        <%= @user.name %>
+        <%= @user.email %>
+      </div>
+    </div>
+    <div class="col-sm-12 col-xs-6 followed">
+      <%= render 'followed_list_form', user: @user %>
+    </div>
+    <div class="col-sm-12 col-xs-6 follower">
+      <%= render 'follower_list_form', user: @user %>
+    </div>
+  </div>
+</div>

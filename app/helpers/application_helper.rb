@@ -4,7 +4,7 @@ module ApplicationHelper
     unless user.provider.blank?
       img_url = user.image_url
     else
-      img_url = 'no_image.png'
+      img_url = '画像がありません'
     end
     image_tag(img_url, alt: user.name)
   end

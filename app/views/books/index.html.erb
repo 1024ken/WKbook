@@ -5,11 +5,18 @@
     <%= link_to "トピックを作成する", new_book_path, class: 'btn btn-default' %>
     <% @books.each do |book| %>
       <div class="row">
-        <p>タイトル:<%= book.title %></p>
-        <p>内容:<%= book.content %></p>
-        <%= profile_img(book.user)%>
-        <%= link_to "編集", edit_book_path(book.id),class: 'btn btn-default btn-sm btn-success' %>
-        <%= link_to "削除", book_path(book.id), method: :delete, data: {confirm: "本当に削除してもいいですか？"},  class: 'btn btn-default btn-sm btn btn-danger' %>
+        <p><%= book.user.name %></p>
+        <%= link_to book_path(book) do %>
+          <h4><strong><%= book.title %></strong></h4>
+        <% end %>
+        <p><%= book.content %></p>
+        <div class="book_picture">
+          <%= profile_img(book.user)%>
+        </div>
+        <div class="booker">
+          <%= link_to "編集", edit_book_path(book.id),class: 'btn btn-default btn-sm btn-info' %>
+          <%= link_to "削除", book_path(book.id), method: :delete, data: {confirm: "本当に削除してもいいですか？"},class: 'btn btn-default btn-sm btn btn-danger' %>
+        </div>
       </div>
     <% end %>
   </div>

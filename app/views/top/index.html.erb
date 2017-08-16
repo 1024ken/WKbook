@@ -1,30 +1,28 @@
-<section class="main-header">
-  <p class="flash"><%= notice %><%= alert %></p>
-  <img src="<%= asset_path "achieve.png" %>">
-</section>
-<body>
-  <section class="application container">
+<div class="container">
+  <div class="main-header">
+    <p class="flash"><%= notice %><%= alert %></p>
+  </div>
+  <body>
     <div class="row_title">
       <h1>WKbook</h1>
     </div>
     <div class="row_main">
-      <%= image_tag "WKbook_main.png" %>
+      <%= image_tag "WKbook_main.png", class: "main-img-size-fix" %>
     </div>
-    <section class="row">
-      <div class="row_application-image">
-        <div class="col-md-3">
-          <%= image_tag "WKbook_sub1.png" %>
-        </div>
-        <div class="col-md-3">
-          <%= image_tag "WKbook_sub2.png" %>
-        </div>
-        <div class="col-md-3">
-          <%= image_tag "WKbook_sub3.png" %>
-        </div>
-        <div class="col-md-3">
-          <%= image_tag "WKbook_sub4.png" %>
-        </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "WKbook_sub1.png", class: "img-size-fix" %>
       </div>
-    </section>
-  </section>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "WKbook_sub2.png", class: "img-size-fix" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "WKbook_sub3.png", class: "img-size-fix" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "WKbook_sub4.png", class: "img-size-fix" %>
+      </div>
+    </div>
+  </div>
 </body>
+</div>

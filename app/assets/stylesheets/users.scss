@@ -1,0 +1,46 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-child.col-md-2.col-sm-4.col-xs-6.users {
+    width: 180px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-child.col-md-2.col-sm-4.col-xs-6.show {
+  background-color: #D7EEFF;
+    width: 180px;
+    height: 200px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 175px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.profile-show {
+    width: 100px;
+    height: 75px;
+    margin-left: 40px;
+}
+
+.new_relationship {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.col-sm-12.col-xs-6.followed {
+    margin-top: -200px;
+    margin-right: 300px;
+}
+
+.col-sm-12.col-xs-6.follower {
+    margin-top: 100px;
+    margin-right: 0px;
+}

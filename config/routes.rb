@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root 'top#index'
 
   devise_for :users, controllers: {
@@ -7,11 +6,18 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-  resources :books, only: [:index, :new, :create, :edit, :update, :destroy] do
-    collection do
-      post :confirm
-    end
+  resources :books do
+    resources :comments
+    post :confirm, on: :collection
   end
+
+  resources :conversations do
+    resources :messages
+  end
+
+  resources :users, only: [:index, :show]
+
+  resources :relationships, only: [:create, :destroy]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
