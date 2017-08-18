@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'twitter-bootstrap-rails'
+gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'faker'
 gem 'omniauth'

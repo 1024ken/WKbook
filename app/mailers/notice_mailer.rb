@@ -8,7 +8,7 @@ class NoticeMailer < ApplicationMailer
   def sendmail_book(book)
     @book = book
 
-    mail to: "1024.ken@gmail.com",
+    mail to: "wk19841024@gmail.com",
       subject: "【WKbook】トピックが投稿されました"
   end
 end
