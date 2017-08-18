@@ -21,12 +21,32 @@ input[type="submit"].btn-block{
   margin: 15px 0;
 }
 
+.row-book {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    border-bottom-width: 0px;
+    margin-bottom: 10px;
+    background-color: #D7EEFF;
+}
+
+.three {
+    padding-right: 470px;
+}
+
 .book_picture {
     width: 200px;
     height: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+  img { width: 50%;
+    }
 }
 
 .booker {
+  margin-top: 10px;
   display: block;
 }
 
