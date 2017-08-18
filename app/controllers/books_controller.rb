@@ -40,7 +40,7 @@ class BooksController < ApplicationController
     @book.user_id = current_user.id
     if @book.save
       redirect_to books_path, notice: "トピックを作成しました！"
-      NoticeMailer.sendmail_book(@book).deliver
+      NoticeMailer.sendmail_book(@book.user).deliver
     else
       render "new"
     end
