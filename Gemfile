@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twitter-bootstrap-rails'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'pry-rails'
 gem 'faker'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -50,7 +51,6 @@ gem 'rails-i18n'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'pry-rails'
   gem 'better_errors'
   gem 'capistrano', '3.6.0'
   gem 'capistrano-bundler'
