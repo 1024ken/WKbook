@@ -5,18 +5,20 @@
     <%= link_to "トピックを作成する", new_book_path, class: 'btn btn-default' %>
     <% @books.each do |book| %>
       <div class="row-book">
-        <div class="three">
-          <p><%= book.user.name %></p>
-          <%= link_to book_path(book) do %>
-            <h4><strong><%= book.title %></strong></h4>
-          <% end %>
-          <p><%= book.content %></p>
-          <div class="book_picture">
-            <%= profile_img(book.user)%>
-          </div>
-          <div class="booker">
-            <%= link_to "編集", edit_book_path(book.id),class: 'btn btn-default btn-sm btn-info' %>
-            <%= link_to "削除", book_path(book.id), method: :delete, data: {confirm: "本当に削除してもいいですか？"},class: 'btn btn-default btn-sm btn btn-danger' %>
+        <div class="box4">
+          <div class="book-three">
+            <p><%= book.user.name %></p>
+            <%= link_to book_path(book) do %>
+              <h4><strong><%= book.title %></strong></h4>
+            <% end %>
+            <p><%= book.content %></p>
+            <div class="book_picture">
+              <%= profile_img(book.user)%>
+            </div>
+            <div class="booker">
+              <%= link_to "編集", edit_book_path(book.id),class: 'btn btn-default btn-sm btn-info' %>
+              <%= link_to "削除", book_path(book.id), method: :delete, data: {confirm: "本当に削除してもいいですか？"},class: 'btn btn-default btn-sm btn btn-danger' %>
+            </div>
           </div>
         </div>
       </div>
