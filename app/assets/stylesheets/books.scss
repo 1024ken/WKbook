@@ -25,6 +25,37 @@ input[type="submit"].btn-block{
   margin: 15px 0;
 }
 
+.book-topic {
+  position: relative;
+  padding: 0.25em 1em;
+  margin: 2em 0;
+  margin-left: 150px;
+  margin-right: 150px;
+  top: 0;
+  background: #f5f5f5;
+}
+.book-topic:before, .book-topic:after {
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 15px;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.book-topic:before {
+  border-left: solid 2px #000;
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
+  left: 0;
+}
+.book-topic:after {
+  border-right: solid 2px #000;
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
+  right: 0;
+}
+
 .row-book {
     margin-top: 10px;
     padding-top: 10px;

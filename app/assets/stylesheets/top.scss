@@ -3,18 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .main-img-size-fix {
-  width: 68%;
+  width: 74%;
 }
 
 .img-size-fix {
-  width: 400px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
  }
 
 .row_title {
   position: relative;
             right:10px;
-            top:45px;
+            top:20px;
   font-family : cursive;
   font-size: 20px;
   width: 100%;
@@ -24,8 +24,14 @@
 }
 
 .row_main {
-    margin-top: 56px;
-    margin-bottom: 28px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.col-xs-6.col-md-3 {
+  width: 285px;
+  height: 170px;
+  padding: 10px 10px 10px 10px;
 }
 
 .container.clearfix {
